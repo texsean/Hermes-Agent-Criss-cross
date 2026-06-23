@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# ESP32 / PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.idea/
+.vscode/
+*.sln.DotSettings.user
+
+# Data directories (generated at runtime)
+/data/inventorybuddy/
+
+# Environment
+.env
+*.env.local
