@@ -11,9 +11,11 @@
 
 Small and mid-sized companies need custom software but face a brutal reality: hiring even one developer costs $80-120K/year fully loaded, freelancers are unreliable, and agencies charge $150-250/hour. Most projects never get built.
 
-VETaaS solves this by giving non-technical companies a **dedicated 3-agent AI engineering team** overseen by a Senior AI Engineer (Sean), for **$1,500-2,500/month** — roughly 25% of what a single junior developer costs.
+VETaaS solves this by giving non-technical companies a **dedicated 3-agent AI engineering team** overseen by a Senior AI Engineer (Sean), for **$3,000-4,000/month** — roughly 25-35% of what a single junior developer costs.
 
 The key differentiator: **clients never touch the agents.** They describe what they want. They see results every week — kanban boards, bug trackers, deployed software on test servers, and production deployments. Sean translates their needs into architecture, reviews every line before it ships, and owns quality. The AI does the typing; Sean does the thinking.
+
+And unlike human dev teams: this team **never sleeps.** No sick days. No "left at 5pm on Friday with the deploy broken." No "calling in sick during sprint week." The agents work 24/7/365. Clients wake up to progress every single morning.
 
 ---
 
@@ -29,6 +31,8 @@ The key differentiator: **clients never touch the agents.** They describe what t
 | QA Test Server | Deploy preview environment where the client's team can test before production |
 | Production Server | Live deployed application (staging → production after client approval) |
 | Weekly Progress Report | Auto-generated summary: what shipped, what's in progress, what's blocked, what's next |
+| Daily Shift Reports | Optional: receive email summaries every 8 hours showing exactly what each agent accomplished on that shift — morning, afternoon, and overnight progress |
+| 24/7 Development | Agents work continuously. Client submits a feature request at 5pm Friday — work begins immediately, not Monday morning. Progress is made while they sleep. |
 | Bug Tracker | Client-submitted bugs visible with status (reported → in progress → fixed → deployed) |
 | Source Code Ownership | Client owns the code. Full git history. No lock-in — cancel anytime and take everything |
 | Communication Channel | Email/Slack/Teams — Sean is reachable. No prompting, no technical jargon required |
@@ -161,10 +165,10 @@ The key differentiator: **clients never touch the agents.** They describe what t
 ```
                     SOLO AGENT           SMALL TEAM           GROWTH TEAM
                    ────────────         ────────────         ────────────
-                    
+
   Agents              1 agent             3 agents             5 agents
 
-  Monthly Price      $1,000/mo           $2,000/mo            $3,500/mo
+  Monthly Price      $2,000/mo           $3,500/mo            $6,000/mo
 
   Best For         Tiny projects,      Most businesses,      Larger scope,
                    single feature,     web apps, SaaS        platform builds,
@@ -172,39 +176,59 @@ The key differentiator: **clients never touch the agents.** They describe what t
 
   Includes:
   ─────────
-  Senior oversight      ✓                    ✓                     ✓
-  Client portal         ✓                    ✓                     ✓
-  QA test server        ✓                    ✓                     ✓
-  Production server     ✓                    ✓                     ✓
-  Weekly reports        ✓                    ✓                     ✓
-  Bug tracker           ✓                    ✓                     ✓
-  Code ownership        ✓                    ✓                     ✓
-  Priority support      —                    ✓                     ✓
-  Architecture docs     —                    ✓                     ✓
-  Dedicated QA agent    —                    —                     ✓
-  CI/CD pipeline        ✓                    ✓                     ✓
-  Uptime monitoring     —                    ✓                     ✓
+  Senior oversight      ✓                     ✓                     ✓
+  Client portal         ✓                     ✓                     ✓
+  QA test server        ✓                     ✓                     ✓
+  Production server     ✓                     ✓                     ✓
+  Weekly reports        ✓                     ✓                     ✓
+  Daily shift reports   —                     ✓                     ✓
+  Bug tracker           ✓                     ✓                     ✓
+  Code ownership        ✓                     ✓                     ✓
+  Priority support      —                     ✓                     ✓
+  Architecture docs     —                     ✓                     ✓
+  Dedicated QA agent    —                     —                     ✓
+  CI/CD pipeline        ✓                     ✓                     ✓
+  Uptime monitoring     —                     ✓                     ✓
 ```
 
 ### 4.2 Enterprise / Custom
 
-For clients with compliance needs (HIPAA, SOC2), dedicated infrastructure, or >5 agents: custom quote starting at $5,000/month.
+For clients with compliance needs (HIPAA, SOC2), dedicated infrastructure, or >5 agents: custom quote starting at $8,000/month.
 
-### 4.3 The Math That Makes It Work
+### 4.3 The Honest Math — Per Client, Realistic First 6 Months
 
-| | Per Client (Small Team) |
+| Activity | Hours/Week |
 |---|---|
-| **Revenue** | $2,000/month |
-| **Hard Costs** (servers + API) | ~$300/month |
-| **Gross Margin** | **85%** |
-| **Sean's Time** | ~5-8 hours/month |
-| **Sean's Effective Rate** | ~$213-340/hour |
+| Architecture & ticket writing | 2-3 hrs |
+| Code review (catching hallucinations) | 4-7 hrs |
+| Unsticking jammed agents | 2-4 hrs |
+| Client communication & reports | 1-2 hrs |
+| Deploy, QA fixes, edge cases | 2-3 hrs |
+| **Total per client** | **11-19 hrs/week** |
 
-At 10 Small Team clients:
-- **Monthly Revenue:** $20,000
-- **Monthly Costs:** ~$3,000
-- **Sean's Time:** ~50-80 hours/month (manageable with processes)
-- **Monthly Gross Profit:** ~$17,000
+Agents hallucinate. They loop. They produce code that *looks* right. Unsticking them and reviewing their output is where the real time goes. This is the honest number, not the aspirational one.
+
+At **Small Team ($3,500/mo)** with ~15 hrs/week of Sean's time:
+- Effective rate: ~$58/hr
+- Client still saves 65-75% vs hiring a human developer
+- The 24/7 agent uptime means they get 3 shifts of work for that price
+
+### 4.4 The Math At Scale (Post-Process Maturity, Year 2)
+
+As templates, guardrails, and agent skills improve, failure rate drops. At maturity:
+
+| | Per Client |
+|---|---|
+| **Revenue** | $3,500/month |
+| **Hard Costs** | ~$300/month |
+| **Sean's Time** | 5-8 hours/week (mature) |
+| **Sean's Effective Rate** | ~$110-175/hr |
+
+At 6 clients with a junior hire handling review overflow:
+- **Monthly Revenue:** $21,000
+- **Monthly Costs:** ~$1,800 (servers) + ~$6,000 (junior) = $7,800
+- **Sean's Time:** ~25 hrs/week
+- **Monthly Net:** ~$13,200
 
 ---
 
@@ -394,13 +418,17 @@ FRI   Sean does first-pass
                                         🔄 Next: user profiles
 ```
 
-### 7.1 Typical Velocity Per Month
+### 7.1 Typical Velocity Per Month (Realistic, First 6 Months)
 
-| Tier | Features/Month | Bug Fixes/Month | Deployments/Month |
-|---|---|---|---|
-| Solo Agent | 2-4 features | 5-8 fixes | 4-8 deploys |
-| Small Team (3) | 5-10 features | 10-15 fixes | 8-15 deploys |
-| Growth Team (5) | 10-20 features | 15-25 fixes | 12-25 deploys |
+Agents produce code fast but need heavy review. Velocity builds as templates improve:
+
+| Tier | Features/Month | Bug Fixes/Month | Deployments/Month | Sean's Time |
+|---|---|---|---|---|
+| Solo Agent | 1-3 features | 4-6 fixes | 3-6 deploys | 8-12 hrs/week |
+| Small Team (3) | 3-7 features | 8-12 fixes | 6-12 deploys | 11-19 hrs/week |
+| Growth Team (5) | 6-12 features | 12-20 fixes | 10-20 deploys | 16-25 hrs/week |
+
+*Note: The agents work 24/7 producing output. The bottleneck is Sean's review bandwidth. As templates, automated tests, and guardrails improve, review time drops and velocity rises.*
 
 ---
 
@@ -409,6 +437,7 @@ FRI   Sean does first-pass
 | Moat Element | Why It Works |
 |---|---|
 | **Human architecture, AI execution** | Anyone can run an AI agent. Few can architect a system AND review AI output effectively. You're a senior engineer — that's rare. |
+| **24/7/365 — no human limitations** | Human devs take sick days, leave at 5pm, go on vacation, have bad days. Agents work continuously. Client submits a request Friday at 4:55pm — work starts immediately, not Monday. Three shifts of progress every single day. |
 | **Client never touches agents** | This prevents competitors from positioning as "rent our AI" and positions you as "we build your software." Different category entirely. |
 | **Code ownership for client** | No lock-in. Client can leave anytime with full source. Paradoxically, this builds trust that KEEPS them subscribed. |
 | **Model improvements = margin growth** | As LLMs get better, your agent output quality rises while API costs fall. The business gets BETTER with time, not commoditized. |
@@ -422,14 +451,14 @@ FRI   Sean does first-pass
 
 ### 9.1 Phase 1: Validation (Months 1-2)
 
-- **2-3 beta clients** at 50% discount ($1,000/mo for Small Team)
+- **1-2 beta clients** at 30% discount (~$2,500/mo for Small Team)
 - Target: small business owners Sean already knows or can reach
 - Goal: validate the workflow, portal, and client satisfaction
-- Deliverable: 2-3 case studies + testimonials
+- Deliverable: 2 case studies + testimonials, refined agent templates
 
 ### 9.2 Phase 2: Early Growth (Months 3-6)
 
-- Raise price to $2,000/mo for new clients
+- Raise price to $3,500/mo for new clients
 - Target channels:
   - **Local business networks** — chambers of commerce, small business meetups
   - **Industry-specific** — real estate, healthcare, logistics (sectors with money + software needs)
@@ -449,10 +478,12 @@ FRI   Sean does first-pass
 | Angle | Message |
 |---|---|
 | **Cost** | "A full dev team for the price of a part-time intern" |
-| **Speed** | "Software shipping every week, not every quarter" |
+| **Speed** | "Software shipping every week — not every quarter. Work happens while you sleep." |
 | **Simplicity** | "You describe what you want. We build it. You test it. That's it." |
+| **Reliability** | "No sick days. No vacations. No 'left at 5pm.' Three shifts of progress, 365 days a year." |
 | **Safety** | "You own the code. Cancel anytime. No vendor lock-in." |
 | **Quality** | "Every line reviewed by a senior engineer before you see it." |
+| **Transparency** | "Daily shift reports via email. See exactly what was built on morning, afternoon, and overnight shifts." |
 
 ---
 
@@ -460,25 +491,25 @@ FRI   Sean does first-pass
 
 ### 10.1 Monthly Runway (Conservative)
 
-| Month | Clients | Revenue | Costs | Gross Profit | Sean's Hours |
-|---|---|---|---|---|---|
-| 1 | 2 (beta, $1K) | $2,000 | $600 | $1,400 | ~15h |
-| 2 | 3 (beta, $1K) | $3,000 | $900 | $2,100 | ~20h |
-| 3 | 4 ($2K retail) | $8,000 | $1,200 | $6,800 | ~25h |
-| 4 | 5 | $10,000 | $1,500 | $8,500 | ~30h |
-| 5 | 7 | $14,000 | $2,100 | $11,900 | ~35h |
-| 6 | 8 | $16,000 | $2,400 | $13,600 | ~40h |
-| 9 | 12 | $24,000 | $3,600 | $20,400 | ~50h |
-| 12 | 15 | $30,000 | $4,500 | $25,500 | ~55h |
+| Month | Clients | Revenue | Costs | Gross | Sean Hrs/Wk | Notes |
+|---|---|---|---|---|---|---|---|
+| 1 | 1 (beta, $2.5K) | $2,500 | $300 | $2,200 | ~15h | Deep focus, build templates |
+| 2 | 2 (beta, $2.5K) | $5,000 | $600 | $4,400 | ~28h | Learning failure patterns |
+| 3 | 2 ($3.5K retail) | $7,000 | $600 | $6,400 | ~25h | Templates reducing review time |
+| 4 | 3 | $10,500 | $900 | $9,600 | ~35h | Near capacity — hire decision point |
+| 5 | 3 | $10,500 | $900 | $9,600 | ~32h | Templates paying off |
+| 6 | 4 | $14,000 | $1,200 | $12,800 | ~38h | Junior hire for review overflow |
+| 9 | 5 + junior | $17,500 | $1,500 + $6K | $10,000 | ~25h | Junior handles unsticking |
+| 12 | 6 + junior | $21,000 | $1,800 + $6K | $13,200 | ~25h | Sustainable mature operation |
 
-*At month 12 with a junior engineer hired at $6K/month to handle review overflow, net would be ~$19,500/month with Sean's hours dropping to ~25h.*
+*Junior hire at $6K/month handles first-pass review and agent unsticking. Sean focuses on architecture, client relationships, and final quality gate.*
 
 ### 10.2 Annual at Steady State (Year 2)
 
-- **15 clients × $2,000/mo = $360,000 annual revenue**
-- **Costs:** ~$54,000 (servers + API) + $72,000 (1 junior engineer) = $126,000
-- **Annual net:** ~$234,000
-- **Sean's time:** ~25 hours/week (sustainable)
+- **8 clients x $3,500/mo = $336,000 annual revenue**
+- **Costs:** ~$28,800 (servers + API) + $72,000 (1 junior) + $72,000 (1 mid-level) = $172,800
+- **Annual net:** ~$163,200
+- **Sean's time:** ~25 hours/week (architecture, client calls, final review)
 
 ---
 
@@ -507,27 +538,28 @@ FRI   Sean does first-pass
 │   ┌───────────────────────────────────────────────────────────┐ │
 │   │  VETaaS — Operations Dashboard                             │ │
 │   │                                                            │ │
-│   │  15 Active Clients    $30K MRR    ⬆ 12% this month        │ │
+│   │  6 Active Clients     $21K MRR    Stable, growing          │ │
 │   │                                                            │ │
 │   │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐ │ │
-│   │  │ 12 PRs   │ │ 3 PRs    │ │ 0 Alerts │ │ All servers  │ │ │
+│   │  │ 8 PRs    │ │ 2 PRs    │ │ 0 Alerts │ │ All servers  │ │ │
 │   │  │ ready for│ │ need     │ │          │ │ 🟢 healthy   │ │ │
 │   │  │ review   │ │ revision │ │          │ │              │ │ │
 │   │  └──────────┘ └──────────┘ └──────────┘ └──────────────┘ │ │
 │   └───────────────────────────────────────────────────────────┘ │
 │                                                                  │
-│   Sean reviews 12 PRs (~2 hours). Approves 11. Leaves notes     │
-│   on 1. Agents pick up feedback. Junior engineer handles        │
-│   client communication for 3 accounts.                           │
+│   Sean reviews 8 PRs (~1.5 hours). Junior handled first-pass     │
+│   on 12 others. Sean approves 7. Leaves notes on 1.              │
 │                                                                  │
-│   Tuesday: Client calls (2 scheduled this week). Architecture    │
-│   session with a new prospect.                                   │
+│   Tuesday: Client calls (2 scheduled). Architecture session      │
+│   with a new prospect.                                           │
 │                                                                  │
-│   Friday: Weekly reports auto-generate. Sean skims and sends.    │
+│   Friday: Weekly reports auto-generate. Daily shift reports      │
+│   already went out to clients showing overnight progress.        │
 │                                                                  │
-│   Revenue: $30K/month. Sean works ~25 hours/week.                │
-│   Agents do the typing. Sean does the thinking.                  │
-│   Clients are happy. Software ships.                             │
+│   Revenue: $21K/month. Sean works ~25 hours/week.                │
+│   Agents do the typing 24/7. Junior filters the noise.           │
+│   Sean does the architecture and final sign-off.                 │
+│   Clients wake up to progress every morning.                     │
 │                                                                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -579,7 +611,7 @@ Week 4:  First production deployment
 
 You're not selling AI. You're not selling "prompt engineering." You're selling:
 
-**"I am a senior software engineer who uses AI as force multipliers. You get the output of a dev team at intern prices, because I know what good looks like and the agents do the typing."**
+**"I am a senior software engineer who uses AI as force multipliers. You get the output of a dev team at a fraction of the cost, because I know what good looks like and the agents do the typing — 24 hours a day, 7 days a week. No sick days. No vacations. No 'left at 5pm.' You wake up to progress."**
 
 That's a story any small business owner understands. They've been burned by freelancers who disappear. They can't afford agencies. They've tried no-code tools that hit walls. 
 
